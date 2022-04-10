@@ -8,7 +8,13 @@
   <script>
     $(document).ready(function(){
           $("#g1").click(function(){
-            $.get("https://sayantanchoudhury.github.io/greenOn");
+              $.load("/greenOn", function(resp, status, xhr)
+              {
+                if(status == "success")
+                  alert("Green Light is on");
+                if(status == "error")
+                  alert(xhr.statusText);
+              });
           });
     });
   </script>
@@ -18,6 +24,7 @@
   <h1>Welcome to the webpage</h1>
   <h3>LED Control</h3><br>
   <button id="g1">Green On</button></a>
+  <p></p>
   <a href="/greenOff"><button>Green Off</button></a><br><br>
   <a href="/yellowOn"><button>Yellow On</button></a>
   <a href="/yellowOff"><button>Yellow Off</button></a><br><br>
