@@ -1,7 +1,24 @@
-<html>
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+          $("#g1").click(function(){
+            $.post("https://sayantanchoudhury.github.io/greenOn")
+          });
+    });
+  </script>
+</head>
+
+<body>
   <h1>Welcome to the webpage</h1>
   <h3>LED Control</h3><br>
-  <a href="/greenOn"><button>Green On</button></a>
+  <button id="g1">Green On</button></a>
   <a href="/greenOff"><button>Green Off</button></a><br><br>
   <a href="/yellowOn"><button>Yellow On</button></a>
   <a href="/yellowOff"><button>Yellow Off</button></a><br><br>
@@ -9,4 +26,7 @@
   <a href="/redOff"><button>Red Off</button></a><br><br>
   <a href="/whiteOn"><button>White On</button></a>
   <a href="/whiteOff"><button>White Off</button></a><br><br>
+  
+  
+</body>
 </html>
