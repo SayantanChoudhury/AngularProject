@@ -8,13 +8,7 @@
   <script>
     $(document).ready(function(){
           $("#g1").click(function(){
-              $.get("greenOn", function(resp, status, xhr)
-              {
-                if(status == "success")
-                  alert("Green Light is on");
-                if(status == "error")
-                  alert(xhr.statusText);
-              });
+              $("p").load("greenOn");
           });
     });
   </script>
