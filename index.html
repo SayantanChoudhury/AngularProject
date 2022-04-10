@@ -6,9 +6,10 @@
   <title>Document</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>
+    var base=192.168.1.2;
     $(document).ready(function(){
           $("#g1").click(function(){
-              $("p").load("greenOn");
+              $("p").load(base+"/greenOn");
           });
     });
   </script>
